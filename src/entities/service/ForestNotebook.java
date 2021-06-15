@@ -141,4 +141,12 @@ public class ForestNotebook {
         });
     }
 
+    public void sortAnimalsByHeight(){
+        animals.sort((o1, o2) -> Double.compare(o2.getHeight(), o1.getHeight()));
+    }
+
+    public void sortPlantsByHeight(){
+        plants.sort((o1, o2) -> Double.compare(o2.getHeight(), o1.getHeight()));
+    }
+
 }

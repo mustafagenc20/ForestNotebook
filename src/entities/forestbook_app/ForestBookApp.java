@@ -75,7 +75,9 @@ public class ForestBookApp {
         System.out.println(forestNotebook.getHerbivores());
 
         System.out.println("\n ====== Print list according to height ======");
-
+        forestNotebook.sortAnimalsByHeight();
+        forestNotebook.sortPlantsByHeight();
+        forestNotebook.printNotebook();
 
     }
 }
