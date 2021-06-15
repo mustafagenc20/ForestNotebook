@@ -11,34 +11,34 @@ import java.util.List;
 public class ForestBookApp {
     public static void main(String[] args) {
         ForestNotebook forestNotebook = new ForestNotebook();
-        Bush bush = new Bush("Apple", 3.23);
+        Bush bush = new Bush("Croton", 3.23);
         forestNotebook.addPlant(bush);
-        Weed weed = new Weed("DereOtu",1.21);
+        Weed weed = new Weed("Dandelion",1.21);
         forestNotebook.addPlant(weed);
-        Flower flower = new Flower("Gul", 2.34);
+        Flower flower = new Flower("Rose", 2.34);
         forestNotebook.addPlant(flower);
-        Tree tree1 = new Tree("Cam", 1.43);
+        Tree tree1 = new Tree("Pine", 1.43);
         forestNotebook.addPlant(tree1);
-        Tree tree2 = new Tree("Mese", 3.55);
+        Tree tree2 = new Tree("Oak", 3.55);
         forestNotebook.addPlant(tree2);
 
-        Carnivore carnivore1 = new Carnivore("Kopek");
+        Carnivore carnivore1 = new Carnivore("Dog");
         forestNotebook.addAnimal(carnivore1);
-        Carnivore carnivore2 = new Carnivore("Aslan");
+        Carnivore carnivore2 = new Carnivore("Wolf");
         forestNotebook.addAnimal(carnivore2);
-        Carnivore carnivore3 = new Carnivore("Kedi");
+        Carnivore carnivore3 = new Carnivore("Tiger");
         forestNotebook.addAnimal(carnivore3);
-        Omnivore omnivore1 = new Omnivore("Inek");
+        Omnivore omnivore1 = new Omnivore("Bear");
         forestNotebook.addAnimal(omnivore1);
-        Omnivore omnivore2 = new Omnivore("Keci");
+        Omnivore omnivore2 = new Omnivore("Sloth");
         forestNotebook.addAnimal(omnivore2);
-        Omnivore omnivore3 = new Omnivore("Koc");
+        Omnivore omnivore3 = new Omnivore("Raccoon");
         forestNotebook.addAnimal(omnivore3);
-        Herbivore herbivore1 = new Herbivore("Ayi");
+        Herbivore herbivore1 = new Herbivore("Elephant");
         forestNotebook.addAnimal(herbivore1);
-        Herbivore herbivore2 = new Herbivore("Penguen");
+        Herbivore herbivore2 = new Herbivore("Giraffe");
         forestNotebook.addAnimal(herbivore2);
-        Herbivore herbivore3 = new Herbivore("Tavuk");
+        Herbivore herbivore3 = new Herbivore("Cow");
         forestNotebook.addAnimal(herbivore3);
 
         // added to List<Plant>
@@ -57,24 +57,25 @@ public class ForestBookApp {
 //        List<Plant> plants = List.of(bush,weed,flower,tree1,tree2);
 
 
-        System.out.println("====== Print list size ======");
+        System.out.println("\n ====== Print list size ======");
         System.out.println(forestNotebook.getAnimalCount());
         System.out.println(forestNotebook.getPlantCount());
 
-        System.out.println("====== Print unsorted list ======");
+        System.out.println("\n ====== Print unsorted list ======");
         forestNotebook.printNotebook();
 
-        System.out.println("====== Print sorted list ======");
+        System.out.println("\n ====== Print sorted list ======");
         forestNotebook.sortAnimalsByName();
         forestNotebook.sortPlantsByName();
         forestNotebook.printNotebook();
 
-        System.out.println("====== Print list of Carnivores, Omnivores and Herbivores ======");
+        System.out.println("\n ====== Print list of Carnivores, Omnivores and Herbivores ======");
         System.out.println(forestNotebook.getCarnivores());
         System.out.println(forestNotebook.getOmnivores());
         System.out.println(forestNotebook.getHerbivores());
 
-        System.out.println("====== Print list according to height ======");
+        System.out.println("\n ====== Print list according to height ======");
+
 
     }
 }
