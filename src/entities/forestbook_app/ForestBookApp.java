@@ -22,29 +22,29 @@ public class ForestBookApp {
         Tree tree2 = new Tree("Oak", 3.55);
         forestNotebook.addPlant(tree2);
 
-        Carnivore carnivore1 = new Carnivore("Dog");
+        Carnivore carnivore1 = new Carnivore("Dog", 35, 1.25, 1.5);
         forestNotebook.addAnimal(carnivore1);
-        Carnivore carnivore2 = new Carnivore("Wolf");
+        Carnivore carnivore2 = new Carnivore("Wolf", 55, 1.45, 1.6);
         forestNotebook.addAnimal(carnivore2);
-        Carnivore carnivore3 = new Carnivore("Tiger");
+        Carnivore carnivore3 = new Carnivore("Tiger", 120, 1.90, 1.9);
         forestNotebook.addAnimal(carnivore3);
-        Omnivore omnivore1 = new Omnivore("Bear");
+        Omnivore omnivore1 = new Omnivore("Bear", 250, 3.25, 2.5);
         forestNotebook.addAnimal(omnivore1);
-        Omnivore omnivore2 = new Omnivore("Sloth");
+        Omnivore omnivore2 = new Omnivore("Sloth", 12, 0.25, 0.5);
         forestNotebook.addAnimal(omnivore2);
-        Omnivore omnivore3 = new Omnivore("Raccoon");
+        Omnivore omnivore3 = new Omnivore("Raccoon", 15, 1.15, 0.75);
         forestNotebook.addAnimal(omnivore3);
-        Herbivore herbivore1 = new Herbivore("Elephant");
+        Herbivore herbivore1 = new Herbivore("Elephant", 450, 4.25, 4.5);
         forestNotebook.addAnimal(herbivore1);
-        Herbivore herbivore2 = new Herbivore("Giraffe");
+        Herbivore herbivore2 = new Herbivore("Giraffe", 175, 5.25, 3.5);
         forestNotebook.addAnimal(herbivore2);
-        Herbivore herbivore3 = new Herbivore("Cow");
+        Herbivore herbivore3 = new Herbivore("Cow", 333, 2.25, 2.5);
         forestNotebook.addAnimal(herbivore3);
 
         // added to List<Plant>
-        forestNotebook.setCarnivores(List.of(carnivore1, carnivore2, carnivore3));
-        forestNotebook.setOmnivores(List.of(omnivore1, omnivore2, omnivore3));
-        forestNotebook.setHerbivores(List.of(herbivore1, herbivore2, herbivore3));
+//        forestNotebook.setCarnivores(List.of(carnivore1, carnivore2, carnivore3));
+//        forestNotebook.setOmnivores(List.of(omnivore1, omnivore2, omnivore3));
+//        forestNotebook.setHerbivores(List.of(herbivore1, herbivore2, herbivore3));
 
         herbivore1.addPlantToDiet(bush);
         herbivore2.addPlantToDiet(weed);

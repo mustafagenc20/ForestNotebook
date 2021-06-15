@@ -22,7 +22,7 @@ public class Carnivore extends Animal {
     @Override
     public String toString() {
         return "Carnivore{" +
-                "name=" + getName() +
+                "maxFoodSize=" + maxFoodSize + ", " + getName() + ", " + getWeight() + ", " + getHeight() + ", "  + getLength() +
                 '}';
     }
 }

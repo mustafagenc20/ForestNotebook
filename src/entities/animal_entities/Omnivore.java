@@ -2,6 +2,7 @@ package entities.animal_entities;
 
 import entities.plant_entities.Plant;
 
+import java.util.HashSet;
 import java.util.Set;
 
 public class Omnivore extends Animal {
@@ -17,10 +18,12 @@ public class Omnivore extends Animal {
     }
 
     public Set<Plant> getPlantDiet() {
+        plantDiet = new HashSet<>();
         return plantDiet;
     }
 
     public void setPlantDiet(Set<Plant> plantDiet) {
+        plantDiet = new HashSet<>();
         this.plantDiet = plantDiet;
     }
 
@@ -32,14 +35,16 @@ public class Omnivore extends Animal {
         this.maxFoodSize = maxFoodSize;
     }
 
-    public void addPlantToDiet(Plant plantDiet){
-
+    public void addPlantToDiet(Plant plant){
+        plantDiet = new HashSet<>();
+        this.plantDiet.add(plant);
     }
 
     @Override
     public String toString() {
         return "Omnivore{" +
-                "name=" + getName() +
+                "plantDiet=" + plantDiet +
+                ", maxFoodSize=" + maxFoodSize + ", " + getName() + ", " + getWeight() + ", " + getHeight() + ", "  + getLength() +
                 '}';
     }
 }

@@ -15,18 +15,21 @@ public class ForestNotebook {
     private List<Carnivore> carnivores;
     private List<Omnivore> omnivores;
     private List<Herbivore> herbivores;
-    private int plantCount=0;
-    private int animalCount=0;
-    private List<Animal> animals = new ArrayList<>();
-    private List<Plant> plants = new ArrayList<>();
+    private int plantCount;
+    private int animalCount;
+    private List<Animal> animals;
+    private List<Plant> plants;
 
     public ForestNotebook(){
-
-
+        plants = new ArrayList<>();
+        animals = new ArrayList<>();
+        omnivores = new ArrayList<>();
+        carnivores = new ArrayList<>();
+        herbivores = new ArrayList<>();
     }
 
     public List<Carnivore> getCarnivores() {
-        return carnivores;
+        return carnivores.stream().distinct().collect(Collectors.toList());
     }
 
     public void setCarnivores(List<Carnivore> carnivores) {
@@ -34,7 +37,7 @@ public class ForestNotebook {
     }
 
     public List<Omnivore> getOmnivores() {
-        return omnivores;
+        return omnivores.stream().distinct().collect(Collectors.toList());
     }
 
     public void setOmnivores(List<Omnivore> omnivores) {
@@ -42,7 +45,7 @@ public class ForestNotebook {
     }
 
     public List<Herbivore> getHerbivores() {
-        return herbivores;
+        return herbivores.stream().distinct().collect(Collectors.toList());
     }
 
     public void setHerbivores(List<Herbivore> herbivores) {
@@ -60,11 +63,38 @@ public class ForestNotebook {
     }
 
     public void addAnimal(Animal animal){
+        // check for duplicates
+        this.animals.forEach(a -> {
+            if(a.getName().equals(animal.getName())) {
+                return;
+            }
+        });
+
+        // if no duplicates, add to main animals list
         this.animals.add(animal);
 
-    }
+        // determine what kind of animal it is and add to the proper list
+        if (animal instanceof Carnivore) {
+            this.carnivores.add(((Carnivore) animal));
+        }
+        else if (animal instanceof Herbivore) {
+            this.herbivores.add(((Herbivore) animal));
+        }
+        else if (animal instanceof Omnivore) {
+            this.omnivores.add(((Omnivore) animal));
+        }
+
+    };
 
     public void addPlant(Plant plant){
+        // check for duplicates
+        this.animals.forEach(a -> {
+            if(a.getName().equals(plant.getName())) {
+                return;
+            }
+        });
+
+        // if no duplicates, add to main animals list
         this.plants.add(plant);
 
     }
@@ -72,6 +102,17 @@ public class ForestNotebook {
     public void printNotebook(){
         animals.forEach(System.out::println);
         plants.forEach(System.out::println);
+
+        /*
+        System.out.println("=========== 2. solution =======");
+
+        this.animals.forEach(animal -> {
+            System.out.println(animal.toString());
+        });
+            this.plants.forEach(plant -> {
+                System.out.println(plant.toString());
+        });
+        */
 
     }
 
